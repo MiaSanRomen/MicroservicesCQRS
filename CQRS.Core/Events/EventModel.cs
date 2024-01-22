@@ -3,12 +3,15 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace CQRS.Core.Events;
 
-public readonly record struct EventModel(
-    [property: BsonId, BsonRepresentation(BsonType.ObjectId)] 
-    string Id,
-    DateTime TimeStamp,
-    Guid AggregateIdentifier,
-    string AggregateType,
-    long Version,
-    string EventType,
-    BaseEvent EventData);
+public record EventModel
+{
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string Id { get; set; }
+    public DateTime TimeStamp { get; set; }
+    public Guid AggregateIdentifier { get; set; }
+    public string AggregateType { get; set; }
+    public long Version { get; set; }
+    public string EventType { get; set; }
+    public BaseEvent EventData { get; set; }
+}

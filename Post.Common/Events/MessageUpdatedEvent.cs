@@ -2,6 +2,4 @@
 
 namespace Post.Common.Events;
 
-public record MessageUpdatedEvent(Guid Id,
-    long Version,
-    string Message) : BaseEvent(Id, nameof(MessageUpdatedEvent), Version);
+public record MessageUpdatedEvent(string Message) : BaseEvent(nameof(MessageUpdatedEvent));

@@ -2,6 +2,4 @@
 
 namespace Post.Common.Events;
 
-public record CommentRemovedEvent(Guid Id,
-    long Version,
-    Guid CommentId) : BaseEvent(Id, nameof(CommentRemovedEvent), Version);
+public record CommentRemovedEvent(Guid CommentId) : BaseEvent(nameof(CommentRemovedEvent));

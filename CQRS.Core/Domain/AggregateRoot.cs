@@ -1,4 +1,5 @@
-﻿using CQRS.Core.Events;
+﻿using System.Reflection;
+using CQRS.Core.Events;
 
 namespace CQRS.Core.Domain;
 

@@ -2,9 +2,8 @@
 
 namespace Post.Common.Events;
 
-public record CommentAddedEvent(Guid Id,
-    long Version,
+public record CommentAddedEvent(
     Guid CommentId,
     string Username,
     string Comment,
-    DateTime CommentDate) : BaseEvent(Id, nameof(CommentAddedEvent), Version);
+    DateTime CommentDate) : BaseEvent(nameof(CommentAddedEvent));

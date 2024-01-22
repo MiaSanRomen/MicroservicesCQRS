@@ -2,4 +2,4 @@
 
 namespace Post.Common.Events;
 
-public record PostLikedEvent(Guid Id, long Version) : BaseEvent(Id, nameof(PostLikedEvent), Version);
+public record PostLikedEvent() : BaseEvent(nameof(PostLikedEvent));
